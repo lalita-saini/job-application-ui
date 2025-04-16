@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>Add Job Application</h2>
+<mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Company Name</mat-label>
+    <input matInput [(ngModel)]="application.companyName">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Position</mat-label>
+    <input matInput [(ngModel)]="application.position">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Status</mat-label>
+    <mat-select [(ngModel)]="application.status">
+      <mat-option value="Applied">Applied</mat-option>
+      <mat-option value="Interview">Interview</mat-option>
+      <mat-option value="Offer">Offer</mat-option>
+      <mat-option value="Rejected">Rejected</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Date Applied</mat-label>
+    <input matInput [(ngModel)]="application.dateApplied" type="date">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button color="primary" (click)="onSave()">Save</button>
+</mat-dialog-actions>

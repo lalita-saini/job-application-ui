@@ -1,0 +1,40 @@
+<div class="job-app-container">
+  <div class="header">
+    <h2>Job Applications</h2>
+    <button mat-button color="warn" (click)="logout()">Logout</button>
+  </div>
+  <button mat-raised-button color="primary" (click)="openAddDialog()">Add Application</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Company Name</th>
+        <th>Position</th>
+        <th>Status</th>
+        <th>Date Applied</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let app of pagedApplications">
+        <td>{{ app.companyName }}</td>
+        <td>{{ app.position }}</td>
+        <td>
+          <span *ngIf="editingId !== app.id">{{ app.status }}</span>
+          <select *ngIf="editingId === app.id" [(ngModel)]="app.status">
+            <option *ngFor="let status of statuses" [value]="status">{{ status }}</option>
+          </select>
+        </td>
+        <td>{{ app.dateApplied }}</td>
+        <td>
+          <button *ngIf="editingId !== app.id" (click)="setEditing(app.id)">Edit</button>
+          <button *ngIf="editingId === app.id" (click)="updateStatus(app.id, app.status)">Save</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="pagination-controls" style="margin-top: 1rem; display: flex; align-items: center; gap: 8px;">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+  </div>
+</div>
