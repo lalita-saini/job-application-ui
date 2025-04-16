@@ -1,59 +1,99 @@
-# JobApplicationUi
+# Job Application Tracker UI
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.4.
+A modern web application built with Angular 19 for tracking job applications. This application provides a user-friendly interface to manage and monitor your job search process.
 
-## Development server
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Node.js (v18 or higher)
+- npm (v9 or higher)
+- Angular CLI (v19.1.4)
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd job-application-ui
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+## Development
 
 To start a local development server, run:
 
 ```bash
-ng serve
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The application will be available at `http://localhost:4200/`. The development server supports hot-reloading, so any changes you make to the source files will automatically refresh the browser.
 
-## Code scaffolding
+## Available Scripts
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- `npm start` - Start the development server
+- `npm run build` - Build the application for production
+- `npm run watch` - Build the application in watch mode for development
+- `npm test` - Run unit tests
+- `npm run serve:ssr` - Run the application with server-side rendering
+
+## Project Structure
+
+```
+job-application-ui/
+├── src/                    # Source files
+│   ├── app/               # Application components and modules
+│   ├── assets/            # Static assets
+│   └── environments/      # Environment configurations
+├── dist/                  # Build output
+└── package.json          # Project dependencies and scripts
+```
+
+## Technologies Used
+
+- Angular 19
+- Angular Material
+- TypeScript
+- RxJS
+- Express (for SSR)
+- Karma & Jasmine (for testing)
+
+## Building for Production
+
+To create a production build:
 
 ```bash
-ng generate component component-name
+npm run build
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The build artifacts will be stored in the `dist/` directory. The production build includes:
+- Ahead-of-Time (AOT) compilation
+- Tree-shaking
+- Minification
+- Bundling
+- Asset optimization
+
+## Testing
+
+The project uses Karma and Jasmine for unit testing. To run the tests:
 
 ```bash
-ng generate --help
+npm test
 ```
 
-## Building
+## Server-Side Rendering
 
-To build the project run:
+This application supports server-side rendering (SSR) for improved performance and SEO. To run the SSR version:
 
 ```bash
-ng build
+npm run serve:ssr
 ```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
 ## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Angular Documentation](https://angular.io/docs)
+- [Angular Material Documentation](https://material.angular.io/)
+- [Angular CLI Overview](https://angular.dev/tools/cli)
