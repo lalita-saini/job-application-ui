@@ -10,6 +10,7 @@ import { MatSelectModule } from '@angular/material/select';
 @Component({
   selector: 'app-add-application-dialog',
   templateUrl: './add-application-dialog.component.html',
+  styleUrls: ['./add-application-dialog.component.scss'],
   imports: [
     CommonModule,
     FormsModule,

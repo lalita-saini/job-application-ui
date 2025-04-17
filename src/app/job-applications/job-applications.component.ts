@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { JobApplicationService } from '../services/job-application.service';
@@ -14,7 +14,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-job-applications',
-  imports: [CommonModule, FormsModule, MatFormFieldModule ],
+  standalone: true,
+  imports: [CommonModule, FormsModule, MatFormFieldModule, HttpClientModule ],
   templateUrl: './job-applications.component.html',
   styleUrls: ['./job-applications.component.scss']
 })

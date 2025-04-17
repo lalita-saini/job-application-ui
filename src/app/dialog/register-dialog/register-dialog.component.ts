@@ -12,6 +12,7 @@ import { DialogComponent } from '../dialog.component';
 @Component({
   selector: 'app-register-dialog',
   templateUrl: './register-dialog.component.html',
+  styleUrls: ['./register-dialog.component.scss'],
   imports: [
     CommonModule,
     FormsModule,
